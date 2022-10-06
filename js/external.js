@@ -42,7 +42,7 @@ var classNotFull = confirm("is the class full? (Ok = Yes / Cancel = No)");
 
 var classConflict = confirm("Does the class conflict with your schedule? (Ok = Yes / Cancel = No)");
 
-if (classConflict === true  || classNotFull === true) {
+if (classConflict == true  || classNotFull == true) {
     alert("You cannot register for this class.");
 }else {
     alert("You can register for this class.");
