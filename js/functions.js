@@ -14,6 +14,8 @@ function sayHello(name){
     return "Hello, " + name + "!";
 
 }
+// to test function:
+
 let name = prompt("What is your name user?")
 
 console.log(sayHello(name));
@@ -67,6 +69,8 @@ function isTwo(x){
     return x % 2 ===0
 }
 
+console.log(random);
+
 console.log(isTwo(random));
 
 
@@ -85,6 +89,7 @@ console.log(isTwo(random));
 
 function calculateTip(percent, total ){
     let tip = percent / 100;
+    // using this to make the input into a percentage//
     let amount = tip * total ;
     return amount.toFixed(2);
 }
@@ -119,13 +124,18 @@ alert(" You should tip $" + tip + " on your $" + total+ " bill. " );
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount( originalPrice , discountPercent ){
+function applyDiscount( originalPrice , discount ){
+    let discountPercent = discount / 100 ;
     let discountPrice =  originalPrice * discountPercent;
     let newPrice = originalPrice - discountPrice;
     return newPrice.toFixed(2);
 
 }
 
-console.log("$" + applyDiscount(100, .20));
+let originalPrice = parseFloat(prompt("What is your original price?")) ;
+
+let discount= parseFloat(prompt("What is the discount percentage?"));
+
+console.log("$" + applyDiscount(originalPrice, discount));
 
 })();
