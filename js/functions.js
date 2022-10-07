@@ -120,8 +120,7 @@ alert(" You should tip $" + tip + " on your $" + total+ " bill. " );
  */
 
 function applyDiscount( originalPrice , discountPercent ){
-    let discount = discountPercent / 100;
-    let discountPrice =  originalPrice * discount;
+    let discountPrice =  originalPrice * discountPercent;
     let newPrice = originalPrice - discountPrice;
     return newPrice.toFixed(2);
 
