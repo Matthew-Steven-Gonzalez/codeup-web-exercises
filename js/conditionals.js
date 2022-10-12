@@ -75,28 +75,20 @@ function analyzeColor( color ){
        switch(color){
            case 'red':
                return "Red is the color of a tomato. I wonder if sharks like tomatoes?";
-               break;
            case 'orange':
                return "Orange is also a fruit. A fruit famously from Florida where the most shark attacks occur in the US.";
-               break;
            case 'yellow':
                return "Yellow is the color of the sun. The sun has the power to destroy the vile sharks, lets use that. ";
-               break;
            case 'green':
                return "Green is the color of the jungle. That's where you'll find the shark's rival, Land.";
-               break;
            case 'blue':
                return "Blue is the color of the Ocean. That's where sharks live.";
-               break;
            case 'indigo':
                return "Indigo is the color of a grape ,apparently . I had to google indigo things.";
-               break;
            case 'violet':
                return "Violet is not only a color but a character from an old movie about candy.";
-               break;
            default:
                return "I know know nothing about that color.";
-               break;
        }
 
 }
@@ -145,22 +137,17 @@ function calculateTotal( luckyNumber, total){
     switch(luckyNumber){
         case 1:
             return "$" + ((total) - (total * .10).toFixed(2)) +".";
-            break;
         case 2:
             return "$" + ((total) - (total * .25).toFixed(2)) +".";
-            break;
+
         case 3:
             return "$" + ((total) - (total * .35).toFixed(2)) +".";
-            break;
         case 4:
             return "$" + ((total) - (total * .50).toFixed(2)) +".";
-            break;
         case 0:
             return " the same. Sorry no discount today.";
-            break;
         case 5:
             return "EVERYTHING IS FREE!!!! GRAB IT AND RUN!!!"
-            break;
     }
 }
 
