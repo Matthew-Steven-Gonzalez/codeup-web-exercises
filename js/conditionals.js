@@ -201,13 +201,13 @@ if(choice === true){
         alert("Your number plus one-hundred is " + (parseInt(numberChoice) + 100) + ".");
 
         if (numberChoice >= 0) {
-            alert("Your number is positive! Like you!");
+            alert("Your number is positive!");
         } else {
-            alert("Your number is negative like me!!! Now LEAVE!!!");
+            alert("Your number is negative.");
         }
     }
     else{
-        alert("You have entered a most strange number. Perhaps try a more data type number");
+        alert("You have entered a incorrect data type. Try a more numerical data type.");
         }
 
 }
