@@ -139,7 +139,6 @@ function calculateTotal( luckyNumber, total){
             return "$" + ((total) - (total * .10).toFixed(2)) +".";
         case 2:
             return "$" + ((total) - (total * .25).toFixed(2)) +".";
-
         case 3:
             return "$" + ((total) - (total * .35).toFixed(2)) +".";
         case 4:
