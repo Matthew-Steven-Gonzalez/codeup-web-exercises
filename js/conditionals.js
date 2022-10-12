@@ -207,7 +207,7 @@ if(choice === true){
         }
     }
     else{
-        alert("You have entered a incorrect data type. Try a more numerical data type.");
+        alert("You have entered an incorrect data type. Try a more numerical data type.");
         }
 
 }
