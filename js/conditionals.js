@@ -99,10 +99,10 @@ function analyzeColor( color ){
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
-let colorChoice = prompt("Pick a color?");
-
-alert(analyzeColor(colorChoice.toLowerCase()));
+//
+// let colorChoice = prompt("Pick a color?");
+//
+// alert(analyzeColor(colorChoice.toLowerCase()));
 
 
 /* ########################################################################## */
@@ -126,29 +126,29 @@ alert(analyzeColor(colorChoice.toLowerCase()));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-var luckyNumber = Math.floor(Math.random() * 6);
-
-let cost = parseInt(prompt("Enter total amount of cart?"));
-
-console.log(calculateTotal( luckyNumber, cost));
-
-
-function calculateTotal( luckyNumber, total){
-    switch(luckyNumber){
-        case 1:
-            return "$" + ((total) - (total * .10).toFixed(2)) +".";
-        case 2:
-            return "$" + ((total) - (total * .25).toFixed(2)) +".";
-        case 3:
-            return "$" + ((total) - (total * .35).toFixed(2)) +".";
-        case 4:
-            return "$" + ((total) - (total * .50).toFixed(2)) +".";
-        case 0:
-            return " the same. Sorry no discount today.";
-        case 5:
-            return "EVERYTHING IS FREE!!!! GRAB IT AND RUN!!!"
-    }
-}
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
+// let cost = parseInt(prompt("Enter total amount of cart?"));
+//
+// console.log(calculateTotal( luckyNumber, cost));
+//
+//
+// function calculateTotal( luckyNumber, total){
+//     switch(luckyNumber){
+//         case 1:
+//             return "$" + ((total) - (total * .10).toFixed(2)) +".";
+//         case 2:
+//             return "$" + ((total) - (total * .25).toFixed(2)) +".";
+//         case 3:
+//             return "$" + ((total) - (total * .35).toFixed(2)) +".";
+//         case 4:
+//             return "$" + ((total) - (total * .50).toFixed(2)) +".";
+//         case 0:
+//             return " the same. Sorry no discount today.";
+//         case 5:
+//             return "EVERYTHING IS FREE!!!! GRAB IT AND RUN!!!"
+//     }
+// }
 
 /**
  * TODOne:
@@ -160,11 +160,11 @@ function calculateTotal( luckyNumber, total){
  */
 
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-
-
-alert( "your lucky number is " + luckyNumber + " so your original price of $" + cost + " is now " + calculateTotal(luckyNumber, cost));
-
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
+//
+// alert( "your lucky number is " + luckyNumber + " so your original price of $" + cost + " is now " + calculateTotal(luckyNumber, cost));
+//
 
 /**
  * TODO:
@@ -185,32 +185,32 @@ alert( "your lucky number is " + luckyNumber + " so your original price of $" + 
  * HINT: The way we prompt for a value could be improved
  */
 
-let choice = confirm("would you like to choice a number?");
-
-if(choice === true){
-    let numberChoice = prompt("What number?");
-
-    if(numberChoice == !NaN) {
-
-        if (numberChoice % 2 == 0) {
-            alert("Your number is even!");
-        } else {
-            alert("Your number is odd!");
-        }
-
-        alert("Your number plus one-hundred is " + (parseInt(numberChoice) + 100) + ".");
-
-        if (numberChoice >= 0) {
-            alert("Your number is positive!");
-        } else {
-            alert("Your number is negative.");
-        }
-    }
-    else{
-        alert("You have entered an incorrect data type. Try a more numerical data type.");
-        }
-
-}
-else{
-    console.log("Have a Good Day Sir/Ma'am!");
-}
+// let choice = confirm("would you like to choose a number?");
+//
+// if(choice === true){
+//     let numberChoice = prompt("What number?");
+//
+//     if(numberChoice == !NaN) {
+//
+//         if (numberChoice % 2 == 0) {
+//             alert("Your number is even!");
+//         } else {
+//             alert("Your number is odd!");
+//         }
+//
+//         alert("Your number plus one-hundred is " + (parseInt(numberChoice) + 100) + ".");
+//
+//         if (numberChoice >= 0) {
+//             alert("Your number is positive!");
+//         } else {
+//             alert("Your number is negative.");
+//         }
+//     }
+//     else{
+//         alert("You have entered an incorrect data type. Try a more numerical data type.");
+//         }
+//
+// }
+// else{
+//     console.log("Have a Good Day Sir/Ma'am!");
+// }
