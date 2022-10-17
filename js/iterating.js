@@ -75,7 +75,7 @@ function secondItem(array){
 console.log(secondItem(names));
 
 function lastItem(array) {
-    return "The last item in the array is: " + array[-1] + ".";
+    return "The last item in the array is: " + array[array.length -1] + ".";
     }
 
     console.log(lastItem(names));
