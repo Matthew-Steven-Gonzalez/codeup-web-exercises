@@ -14,7 +14,10 @@
 
     let person = {
         firstName: "Matthew",
-        lastName: "Gonzalez"
+        lastName: "Gonzalez",
+        sayHello : function(){
+            console.log("Hello from " + person.firstName + " " + person.lastName+ "!")
+        }
     };
 
     console.log(person.firstName);
@@ -30,11 +33,8 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function(){
-        console.log("Hello from " + person.firstName + " " + person.lastName+ "!")
-    }
 
-    person.sayHello();
+    console.log(person.sayHello());;
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -60,13 +60,21 @@
     // console.log(shoppers[2]);
     // console.log(shoppers[1]);
 
-    for( let i = 0; i < shoppers.length; i++) {
-        if (shoppers[i].amount > 200) {
-            console.log(shoppers[i].name + " \n Original Price: $" + (shoppers[i].amount).toFixed(2) + " \n Discount: $" + (shoppers[i].amount * .12).toFixed(2) + "\n Final Price: $" + ((shoppers[i].amount) - (shoppers[i].amount * .12)).toFixed(2));
+    // for( let i = 0; i < shoppers.length; i++) {
+    //     if (shoppers[i].amount > 200) {
+    //         console.log(shoppers[i].name + " \n Original Price: $" + (shoppers[i].amount).toFixed(2) + " \n Discount: $" + (shoppers[i].amount * .12).toFixed(2) + "\n Final Price: $" + ((shoppers[i].amount) - (shoppers[i].amount * .12)).toFixed(2));
+    //     } else {
+    //         console.log(shoppers[i].name + "\n Original Price: $" + (shoppers[i].amount).toFixed(2) + "\n No Discount applied.  \n Final Price: $" + (shoppers[i].amount).toFixed(2));
+    //     }
+    // }
+
+    shoppers.forEach(function(shopper){
+        if (shopper.amount > 200) {
+            console.log(shopper.name + " \n Original Price: $" + (shopper.amount).toFixed(2) + " \n Discount: $" + (shopper.amount * .12).toFixed(2) + "\n Final Price: $" + ((shopper.amount) - (shopper.amount * .12)).toFixed(2));
         } else {
-            console.log(shoppers[i].name + "\n Original Price: $" + (shoppers[i].amount).toFixed(2) + "\n No Discount applied.  \n Final Price: $" + (shoppers[i].amount).toFixed(2));
+            console.log(shopper.name + "\n Original Price: $" + (shopper.amount).toFixed(2) + "\n No Discount applied.  \n Final Price: $" + (shopper.amount).toFixed(2));
         }
-    }
+    })
 
     /** TODOne:
      * Create an array of objects that represent books and store it in a
