@@ -13,8 +13,8 @@
      */
 
     let person = {
-        firstName: "Rick",
-        lastName: "Sanchez"
+        firstName: "Matthew",
+        lastName: "Gonzalez"
     };
 
     console.log(person.firstName);
@@ -56,9 +56,9 @@
         {name: 'George', amount: 320}
     ];
 
-    console.log(shoppers[0]);
-    console.log(shoppers[2]);
-    console.log(shoppers[1]);
+    // console.log(shoppers[0]);
+    // console.log(shoppers[2]);
+    // console.log(shoppers[1]);
 
     for( let i = 0; i < shoppers.length; i++) {
         if (shoppers[i].amount > 200) {
@@ -81,33 +81,30 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    let books = [
-        {
-            title: "The Salmon of Doubts",
-            author: {
-                firstName: "Douglas",
-                lastName: "Adams"
-            }
-        },
-        {
-            title: "Walkaway",
-            author: {
-                firstName: "Cory",
-                lastName: "Doctorow"
-            }
-        },
-        {
-            title: "A Brief History of Time",
-            author: {
-                firstName: "Stephen",
-                lastName: "Hawkings"
-            }
-        }
-    ];
+    // let books = [
+    //     {
+    //         title: "The Salmon of Doubts",
+    //         author: {
+    //             firstName: "Douglas",
+    //             lastName: "Adams"
+    //         }
+    //     },
+    //     {
+    //         title: "Walkaway",
+    //         author: {
+    //             firstName: "Cory",
+    //             lastName: "Doctorow"
+    //         }
+    //     },
+    //     {
+    //         title: "A Brief History of Time",
+    //         author: {
+    //             firstName: "Stephen",
+    //             lastName: "Hawkings"
+    //         }
+    //     }
+    // ];
 
-    console.log(books[0].title) // "The Salmon of Doubt"
-    console.log(books[1].author.firstName) // "Douglas"
-    console.log(books[2].author.lastName) // "Adams"
 
     /**
      * TODOne:
@@ -133,10 +130,10 @@
      *      ---
      *      ...
      */
-
-    for( let i = 0; i < books.length;i++){
-        console.log("Book #" + (i+1)+ "\n" + "Title: " + books[i].title + "\n" + "Author: " + books[i].author.firstName + " " + books[i].author.lastName + "\n ---");
-    }
+    //
+    // for( let i = 0; i < books.length;i++){
+    //     console.log("Book #" + (i+1)+ "\n" + "Title: " + books[i].title + "\n" + "Author: " + books[i].author.firstName + " " + books[i].author.lastName + "\n ---");
+    // }
 
     /**
      * Bonus:
@@ -148,5 +145,29 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author_first, author_last) {
+        this.title = title;
+        this.firstName = author_first;
+        this.lastName = author_last;
+
+    }
+
+    function showBookInfo(book){
+        console.log("title: " + this.title + " \n By: " + this.firstName + this.lastName)
+    }
+
+    let books = [
+        new createBook("The Salmon of Doubt","Douglas","Adams"),
+        new createBook("Walkaway","Cory","Doctorow"),
+        new createBook("A Brief History of Time","Stephen","Hawkings")
+    ]
+
+
+    // showBookInfo();
+
+    for( let i = 0; i < books.length;i++){
+        console.log("Book #" + (i+1)+ "\n" + "Title: " + books[i].title + "\n" + "Author: " + books[i].firstName + " " + books[i].lastName + "\n ---");
+    }
 
 })();
