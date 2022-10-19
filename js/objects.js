@@ -89,29 +89,43 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    // let books = [
-    //     {
-    //         title: "The Salmon of Doubts",
-    //         author: {
-    //             firstName: "Douglas",
-    //             lastName: "Adams"
-    //         }
-    //     },
-    //     {
-    //         title: "Walkaway",
-    //         author: {
-    //             firstName: "Cory",
-    //             lastName: "Doctorow"
-    //         }
-    //     },
-    //     {
-    //         title: "A Brief History of Time",
-    //         author: {
-    //             firstName: "Stephen",
-    //             lastName: "Hawkings"
-    //         }
-    //     }
-    // ];
+    let books = [
+        {
+            title: "The Salmon of Doubts",
+            author: {
+                firstName: "Douglas",
+                lastName: "Adams"
+            }
+        },
+        {
+            title: "Walkaway",
+            author: {
+                firstName: "Cory",
+                lastName: "Doctorow"
+            }
+        },
+        {
+            title: "A Brief History of Time",
+            author: {
+                firstName: "Stephen",
+                lastName: "Hawkings"
+            }
+        },
+        {
+            title: "It",
+            author: {
+                firstName: "Stephen",
+                lastName: "King"
+            }
+        },
+        {
+            title: "Diary",
+            author: {
+                firstName: "Anne",
+                lastName: "Frank"
+            }
+        }
+]
 
 
     /**
@@ -143,6 +157,9 @@
     //     console.log("Book #" + (i+1)+ "\n" + "Title: " + books[i].title + "\n" + "Author: " + books[i].author.firstName + " " + books[i].author.lastName + "\n ---");
     // }
 
+  books.forEach(function(book){
+        console.log("Book # " + (books.indexOf(book)+1) +"\n Title: "+book.title+ "\n By: "+ book.author.firstName + " "+ book.author.lastName + "\n ---");
+    })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -164,18 +181,20 @@
     function showBookInfo(book){
         console.log("title: " + this.title + " \n By: " + this.firstName + this.lastName)
     }
-
-    let books = [
-        new createBook("The Salmon of Doubt","Douglas","Adams"),
-        new createBook("Walkaway","Cory","Doctorow"),
-        new createBook("A Brief History of Time","Stephen","Hawkings")
-    ]
+    //
+    // let books = [
+    //     new createBook("The Salmon of Doubt","Douglas","Adams"),
+    //     new createBook("Walkaway","Cory","Doctorow"),
+    //     new createBook("A Brief History of Time","Stephen","Hawkings"),
+    //     new createBook("It","Stephen","King"),
+    //     new createBook("Diary","Anne","Frank")
+    // ]
 
 
     // showBookInfo();
 
-    for( let i = 0; i < books.length;i++){
-        console.log("Book #" + (i+1)+ "\n" + "Title: " + books[i].title + "\n" + "Author: " + books[i].firstName + " " + books[i].lastName + "\n ---");
-    }
+    // for( let i = 0; i < books.length;i++){
+    //     console.log("Book #" + (i+1)+ "\n" + "Title: " + books[i].title + "\n" + "Author: " + books[i].firstName + " " + books[i].lastName + "\n ---");
+    // }
 
 })();
