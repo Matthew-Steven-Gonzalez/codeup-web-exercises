@@ -1,5 +1,7 @@
 "use strict";
 
+// Warmup 10/20
+
 
 let potato =
     {
@@ -11,7 +13,7 @@ let potato =
 
 
 function getPrice(obj){
-    return (obj.price) ;
+    return obj.price ;
 }
 
 console.log(getPrice(potato));
