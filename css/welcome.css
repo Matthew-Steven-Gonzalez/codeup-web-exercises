@@ -1,4 +1,51 @@
+html{
+    background-color: black;
+    text-decoration-color: crimson;
+    background-image: url(/img/Jeff_Goldblum.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+table{
+    color:crimson;
+}
+
+p{
+    color:yellowgreen;
+}
+
+h3{
+    color:yellowgreen;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
+
+/*How to call a class in CSS*/
+
 .fancy-header {
     color: purple;
     text-decoration: overline underline line-through;
+}
+
+.photo_box{
+    alignment: center;
+}
+
+/*How to call an ID in CSS*/
+
+#Top_Banner{
+    color: orange;
+
+}
+
+/*How to call a tag in CSS*/
+
+li{
+    color:lavender;
 }
