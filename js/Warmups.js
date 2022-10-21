@@ -31,12 +31,3 @@ function getLongestString(arr){
     return longestStr;
 }
 
-
-let colors = ["green","blue","perriwinkle"];
-
-console.log(getLongestString(colors));
-
-
-// const longest = (key, array) => Math.max(...array.map(it => it[key].length));
-//
-// console.log(longest("genre", /*in*/ colors));
