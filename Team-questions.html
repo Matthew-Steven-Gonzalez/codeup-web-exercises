@@ -3,32 +3,30 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/team-questions.css">
 <head>
-    <title>CSS | value unset</title>
+    <title>CSS unset</title>
 </head>
 <style>
-
     span {
         color: rosybrown;
-    /*    this being after the stylesheet will change the color of this element in the browser*/
+    /*    this being after the stylesheet will change the color of this element in the browser.*/
     }
     .gfg {
         color: unset;
-    /*    the property value unset returns the value to the originally or inherited value . */
+    /*    the property value unset returns the value to the originally or inherited value. */
     }
 </style>
 <body>
 <h1 style="text-align: center; color: rebeccapurple;">
-    The unset value defaults the property to the parent element. In laymans terms it reverts to a level above for what property value to use. In this example we look at text color for this...
+    The unset value defaults the property to the inherited value from the parent element. In laymans terms it reverts to a level above for what property value to use. In this example we look at text color for this in the html there is a change in text color at line 10...
 </h1>
 <div style="text-align: center;">
     <span class="gfg">This line of code will use the unset property value and be the color value inherited by the parenting element ignoring the change on line 10
  </span>
-<!--    This line of code will use the unset property value and be the color value inherited by the parenting element ignoring the change on line 10-->
     <br>
     <span>This will follow the change implemented on line 10 </span>
-<!--    This will follow the change implemented on line 10-->
+
 </div>
-<div style="text-align: center; color: navajowhite;">
+<div style="text-align: center; color: orange;">
      <span class="gfg">
          This has two levels before reaching default that is why despite being the same class as the previous line it is a different color.
      </span>
