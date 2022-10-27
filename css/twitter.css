@@ -76,7 +76,8 @@ a {
 }
 .profile-image{
     position: absolute;
-    top: 235px;
+    top:245px;
+
 }
 .profile-items{
     padding: 0;
@@ -123,7 +124,7 @@ a {
 
 .media-body{
     float: left;
-    width: calc(100% - 50px);
+    width: calc(100% - 50px );
 }
 
 .profile-items{
