@@ -93,20 +93,78 @@
 // console.log(getTallestHamster(hamsters));
 
 // October 31st
-function fizzbuzz(){
-    for(let i = 1; i < 100;i++){
-        if( i % 3 === 0 && i % 5 === 0){
-            console.log("fizz/buzz");
-        }
-        else if(i % 3 === 0){
-            console.log("fizz");
-        }
-        else if( i % 5 ===0){
-            console.log("buzz");
-        }
-        else{
-            console.log(i);
-        }
+// function fizzbuzz(){
+//     for(let i = 1; i < 100;i++){
+//         if( i % 3 === 0 && i % 5 === 0){
+//             console.log("fizz/buzz");
+//         }
+//         else if(i % 3 === 0){
+//             console.log("fizz");
+//         }
+//         else if( i % 5 ===0){
+//             console.log("buzz");
+//         }
+//         else{
+//             console.log(i);
+//         }
+//     }
+// }
+// fizzbuzz();
+
+//Nov 3rd
+
+const hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "September 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
     }
+];
+
+// function getAverageHeight(arr){
+    // let sum = 0;
+    // arr.forEach(function(hamster) {
+    //         sum += hamster.heightInMM;
+    //         let sum = sum / arr.length;
+    //     }
+    //     )
+    //  return sum / arr.length;
+    // }
+
+function getAverageHeight(array){
+    let totalHeight = 0;
+    for (let element of array){
+        totalHeight += element.heightInMM;
+    }
+    return totalHeight / array.length;
 }
-fizzbuzz();
+
+
+
+console.log(getAverageHeight(hamsters)); // should return 93.2;

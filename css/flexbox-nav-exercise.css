@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=workSans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=montserrat&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=WorkSans&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');*/
 
 * {
     box-sizing: border-box;
+    font-family: 'Montserrat;
 }
 body {
     margin: 0;
@@ -15,26 +16,23 @@ ul {
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
 }
 nav a {
     text-decoration: none;
     color: white;
-    font-family: 'work Sans';
+    font-family: "montserrat";
     display: inline-block;
-    padding: 1em;
-    align-content: center;
+    padding: .5em;
 }
 nav a:hover {
     background: blue;
 }
 
-nav ul li:nth-child(4) {
-    margin:  0 auto;
-}
 .center-logo{
     font-size: 3em;
     padding: .2em 0;
     margin:auto;
-    font-family: 'montserrat;
+    font-family: "Work Sans";
 }
 
