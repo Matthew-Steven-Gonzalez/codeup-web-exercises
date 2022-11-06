@@ -1,0 +1,45 @@
+*{
+    background: #e6e6e6;
+}
+.circle {
+    width: 175px;
+    height: 175px;
+    color: white;
+    font-size: 28px;
+    font-family: 'Anton', sans-serif;
+    background-color: lightgrey;
+    border: 11px solid white;
+    border-radius: 250px;
+    margin: .1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    background-color: #D86244;
+}
+
+.orange {
+    background-color: #DEA03C;
+}
+
+.green {
+    background-color: #8BB079;
+}
+
+.blue {
+    background-color: #49A7A9;
+}
+
+@media screen and (min-width: 576px){
+    .circle {
+        width: 125px;
+        height: 125px;
+        border-radius: 150px;
+    }
+    .underline-circle {
+        border-bottom: 1px solid gray;
+        padding-bottom: 2em;
+    }
+}
