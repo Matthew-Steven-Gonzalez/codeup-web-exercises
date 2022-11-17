@@ -1,9 +1,9 @@
 "use strict";
 
 $(function(){
-    // alert( 'the DOM is finished!');
-    // alert($("#theHeader").html());
-    // alert($("#theFirst").html());
+    let theCode = $(".codeup");
+    // $("#codeup").css("border", "solid 1px red");
+    theCode.css("border","1px solid red");
 
 
 
