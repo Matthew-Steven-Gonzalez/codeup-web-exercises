@@ -1,10 +1,8 @@
 "use strict";
 
 $(function(){
-    let theCode = $(".codeup");
-    // $("#codeup").css("border", "solid 1px red");
-    theCode.css("border","1px solid red");
-
-
-
+    let listItems = $("li");
+    listItems.css("font-size" , "20px");
+    let theCollection = $("h1, p, li");
+    alert($('h1').html());
 })
