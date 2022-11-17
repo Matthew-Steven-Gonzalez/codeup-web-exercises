@@ -25,47 +25,102 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id = "btn1">What is JavaScript?!</button>
+<br>
+<button id = "btn2">Let's Make 'Hello Again' blue...</button>
+<br>
+<button id = "btn3">Turn 'Em Grey...except that one he's blue</button>
+<br>
+<button id = "btn4">What's it say doc!</button>
+
 <script>
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
 
-        var mainHeader = document.getElementById('main-header');
+        // var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Co
 
-        mainHeader.innerHTML= "JavaScript is Cool";
+        // mainHeader.innerHTML= "JavaScript is Cool";
 
-        // TODO: Uncomment the next line and get the sub header element by id
+        //------------------------------------------------------------------------------------------------
 
-        var subHeader = document.getElementById('sub-header');
+        var javaScriptBtn = function (){
+            var mainheader = document.getElementById('main-header');
+            mainheader.innerText = "Javascript is Cool";
+        }
 
-        // TODO: Set the text color of subHeader to blue
+        document.getElementById('btn1').addEventListener('click', javaScriptBtn);
 
-        subHeader.style.color = 'blue';
+        //------------------------------------------------------------------------------------------------
 
-        // TODO: Uncomment the next line and get all list items
+        // TODOne: Uncomment the next line and get the sub header element by id
 
-        var listItems = document.getElementsByTagName( 'li');
+        // var subHeader = document.getElementById('sub-header');
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
+        // TODOne: Set the text color of subHeader to blue
 
-        for(var i = 0; i < listItems.length; i++){
-            if(listItems[i].getAttribute("data-dbid") === "1"){
-               listItems[i].style.color = "blue";
-            }else if (i % 2 === 0) {
-                listItems[i].style.color = "grey";
+        // subHeader.style.color = 'blue';
+
+        // ------------------------------------------------------------------------------------------------
+
+        var letsBlue = function(){
+            var subHeader= document.getElementById('sub-header');
+            subHeader.style.color = 'blue';
+        }
+
+        document.getElementById('btn2').addEventListener('click',letsBlue)
+
+        //------------------------------------------------------------------------------------------------
+
+        // TODOne: Uncomment the next line and get all list items
+
+        // var listItems = document.getElementsByTagName( 'li');
+
+        // TODOne: Set text color on every other list item to grey
+        // TODOne: Set text color of li with dbid = 1 to blue
+
+        // for(var i = 0; i < listItems.length; i++){
+        //     if(listItems[i].getAttribute("data-dbid") === "1"){
+        //        listItems[i].style.color = "blue";
+        //     }else if (i % 2 === 0) {
+        //         listItems[i].style.color = "grey";
+        //     }
+        // }
+
+        //------------------------------------------------------------------------------------------------
+
+        var turnEmGrey = function(){
+            var listItems = document.getElementsByTagName('li');
+            for(let i = 0; i < listItems.length;i++){
+                if(listItems[i].getAttribute('data-dbid')=== '1'){
+                    listItems[i].style.color = "blue";
+                }else if( i % 2 === 0){
+                    listItems[i].style.color = 'grey';
+                }
             }
         }
 
+        document.getElementById('btn3').addEventListener('click', turnEmGrey);
+
+        //------------------------------------------------------------------------------------------------
+
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        // var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-        subParagraphs[0].innerText = "Mission Accomplished!";
+        // subParagraphs[0].innerText = "Mission Accomplished!";
+
+        var translateProfressor = function(){
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
+            subParagraphs[0].innerText = "Mission Accomplished"
+        }
+
+        document.getElementById('btn4').addEventListener('click', translateProfressor)
 
     })();
 </script>
