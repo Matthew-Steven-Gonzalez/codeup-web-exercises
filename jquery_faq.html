@@ -126,7 +126,7 @@
         $('#highlighter-btn').click(function(e){
             e.preventDefault();
             $('ul').each(function(){
-                $(this).children('li').last().toggleClass('highlight')
+                $(this).children().last().toggleClass('highlight')
             })
         })
 
