@@ -111,32 +111,27 @@
 
         //this code here toggle the class making the hidden elements visible.
 
-        $('#showEmFacts').click(function (e) {
-            e.preventDefault();
+        $('#showEmFacts').click(function () {
             $('dd').toggleClass('invisible');
         })
 
         //this code creates a highlight effect on the dt elements that are clicked.
 
-        $('dt').click(function (e) {
-            e.preventDefault();
+        $('dt').click(function () {
             $(this).toggleClass('highlight');
         })
 
-        $('#highlighter-btn').click(function(e){
-            e.preventDefault();
+        $('#highlighter-btn').click(function(){
             $('ul').each(function(){
                 $(this).children().last().toggleClass('highlight')
             })
         })
 
-        $('h3').click(function(e){
-            e.preventDefault();
+        $('h3').click(function(){
             $(this).next().toggleClass('bold')
         })
 
-        $('li').click(function(e){
-            e.preventDefault();
+        $('li').click(function(){
             $(this).parent().children().first().toggleClass('imBlue')
         })
 
