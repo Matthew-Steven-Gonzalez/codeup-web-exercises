@@ -14,6 +14,14 @@
             background: yellow;
         }
 
+        .bold {
+            font-weight: bold;
+        }
+
+        .imBlue {
+            color:blue;
+        }
+
     </style>
 
 
@@ -69,6 +77,33 @@
     </dl>
     <!--    this link here will be clickable and function in showing the hidden facts-->
     <a href="#" id="showEmFacts">Where are the facts?</a>
+
+    <h3>Abilene State Park</h3>
+    <ul id="abilene-state">
+        <li>Camping</li>
+        <li>Swimming</li>
+        <li>Fishing</li>
+        <li>hunting</li>
+    </ul>
+
+    <h3>State Parks of Tennessee</h3>
+    <ul id="state-parks-tennessee">
+        <li>Camping</li>
+        <li>Swimming</li>
+        <li>Fishing</li>
+        <li>hunting</li>
+    </ul>
+
+    <h3>State Parks of Illinois</h3>
+    <ul id="state-parks-illinois">
+        <li>Camping</li>
+        <li>Swimming</li>
+        <li>Fishing</li>
+        <li>hunting</li>
+    </ul>
+
+    <button id="highlighter-btn">Click Here</button>
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
@@ -86,6 +121,23 @@
         $('dt').click(function (e) {
             e.preventDefault();
             $(this).toggleClass('highlight');
+        })
+
+        $('#highlighter-btn').click(function(e){
+            e.preventDefault();
+            $('ul').each(function(){
+                $(this).children('li').last().toggleClass('highlight')
+            })
+        })
+
+        $('h3').click(function(e){
+            e.preventDefault();
+            $(this).next().toggleClass('bold')
+        })
+
+        $('li').click(function(e){
+            e.preventDefault();
+            $(this).parent().children().first().toggleClass('imBlue')
         })
 
     </script>
