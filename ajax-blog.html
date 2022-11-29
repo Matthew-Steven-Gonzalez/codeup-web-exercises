@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <link rel="stylesheet" href="css/general-default.css">
+    <link rel="stylesheet" href="bootstrap-5.1.3/css/bootstrap.css">
+</head>
+<body>
+<nav class="navbar fixed-top p-0 ">
+    <div class="container-fluid theHead">
+        <span class=" h1 theHead mx-auto">Dear Diary...</span>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div id="posts" class=" row col-12">
+    </div>
+</div>
+
+<script defer src="bootstrap-5.1.3/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        "use strict";
+
+        $.get("data/blog.json").done(function (info) {
+            console.log(info);
+        })
+    })();
+    (function () {
+        $.get("data/blog.json").done(function (page) {
+            page.forEach(function (entry) {
+                $('#posts').append(
+                   makeACard(entry)
+                )})
+        })
+    })();
+    function makeACard(page){
+        return '<div class="col-12 row m-auto">' +
+            '<h3 class="col-12 cards">'+ page.date +' </h3>' +
+            '<h1 class = "col-4 cards mx-auto">'+ page.title +' </h1>'+
+            '<p class="col-7 cards mx-auto">' + page.content +' </p>'
+
+    }
+</script>
+</body>
+</html>

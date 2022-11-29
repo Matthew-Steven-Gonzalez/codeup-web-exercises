@@ -1,0 +1,32 @@
+*{
+    background-color:#705446
+}
+
+.cards{
+    background-color:#FDF4E3;
+    border: solid 2px #e1c391;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.theHead {
+    background: black;
+    color: #d3d6d8;
+    font-family: "Brush Script MT";
+}
+
+#body{
+    text-align: center;
+    font-family: fantasy;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#title{
+    align-items: center;
+    font-family: cursive;
+}
+
+#date {
+    font-family: cursive;
+}
