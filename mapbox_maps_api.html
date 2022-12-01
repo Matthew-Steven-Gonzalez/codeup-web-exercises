@@ -25,7 +25,7 @@
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
-<select class="form-select" aria-label="blah" id="zoomOption">
+<select class="form-select " aria-label="blah" id="zoom">
     <option selected>Choose a zoom</option>
     <option value="1" >Original</option>
     <option value="2">Far</option>
@@ -106,23 +106,10 @@
         });
     })
 
-    $('#zoomOption').mousedown(function(){
+
+    $('#zoom').change(function(){
         console.log('test');
-    });
-
-
-    // $('#zoomOption').click(function(){
-    //     if(${} === 1){
-    //         map.mapZoom(15);
-    //     }
-    //     else if(value ===2){
-    //         map.mapZoom(18);
-    //     }
-    //     else if (value ===3){
-    //         map.mapZoom(5);
-    //     }
-    // })
-
+    })
 
     $('#WBC').click(function(){
         map.setCenter([-87.96028, 42.30528]);
