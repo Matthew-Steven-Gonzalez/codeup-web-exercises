@@ -2,9 +2,138 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title >First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.1.3/css/bootstrap.css">
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-dark">
 
+<h1 class="text-center bg-dark text-white">My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<select class="form-select" aria-label="blah" id="zoomOption">
+    <option selected>Choose a zoom</option>
+    <option value="1" >Original</option>
+    <option value="2">Far</option>
+    <option value="3">There</option>
+</select>
+
+<div class="row">
+    <button id="WBC" class="col-4">Wild Berry Cafe</button>
+    <button id="PHD" class="col-4">Portillo's Hot Dog</button>
+    <button id="MFs" class="col-4">Mickey Finn's</button>
+</div>
+
+
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- link for mapkey -->
+
+<script src="js/keys.js"></script>
+
+<!-- link for geocorder -->
+
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!-- link for bootstrap -->
+
+<script defer src="bootstrap-5.1.3/js/bootstrap.js"></script>
+
+<!-- link for jQuery -->
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = mapKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 15,
+        center: [-87.96028, 42.30528]
+    });
+
+    var eateries = [
+        {
+            title:"Wild Berry Cafe",
+            address: "1783 N Milwaukee Ave, Libertyville, IL 60948",
+            popUp: "<h4>Wild Berry Cafe</h4>"
+
+        },
+        {
+            title:"Portillo's Hot Dogs",
+            address: "221 E Townline Rd, Vernon Hills, IL 60061",
+            popUp: "<h4>Portillo's Hot Dogs</h4>"
+
+        },
+        {
+            title:"Mickey Finn's",
+            address: "345 N Milwaukee Ave, Libertyville, IL 60048",
+            popUp: "<h4>Mickey Finn's</h4>"
+
+        }
+
+    ];
+
+
+    eateries.forEach(function(food){
+        geocode(food.address, mapKey).then(function(coordinates){
+            var popup = new mapboxgl.Popup()
+                .setHTML(food.popUp);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map)
+                .setPopup(popup);
+            console.log(food);
+            console.log(coordinates);
+        });
+    })
+
+    $('#zoomOption').mousedown(function(){
+        console.log('test');
+    });
+
+
+    // $('#zoomOption').click(function(){
+    //     if(${} === 1){
+    //         map.mapZoom(15);
+    //     }
+    //     else if(value ===2){
+    //         map.mapZoom(18);
+    //     }
+    //     else if (value ===3){
+    //         map.mapZoom(5);
+    //     }
+    // })
+
+
+    $('#WBC').click(function(){
+        map.setCenter([-87.96028, 42.30528]);
+    })
+    $('#PHD').click(function(){
+        map.setCenter([-87.95911, 42.23991]);
+    })
+    $('#MFs').click(function(){
+        map.setCenter([-87.954352, 42.28635]);
+    })
+
+</script>
 </body>
 </html>
