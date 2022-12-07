@@ -7,6 +7,8 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="btn1">What is JavaScript?!</button>
+<br>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,7 +16,11 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button id="btn3">Turn 'Em Grey...except that one he's blue</button>
+<br>
 <h2 id="sub-header">Hello Again.</h2>
+<button id="btn2">Let's Make 'Hello Again' blue...</button>
+<br>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -25,16 +31,12 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-<button id = "btn1">What is JavaScript?!</button>
-<br>
-<button id = "btn2">Let's Make 'Hello Again' blue...</button>
-<br>
-<button id = "btn3">Turn 'Em Grey...except that one he's blue</button>
-<br>
-<button id = "btn4">What's it say doc!</button>
+
+
+<button id="btn4">What's it say doc!</button>
 
 <script>
-    (function() {
+    (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
 
@@ -46,7 +48,7 @@
 
         //------------------------------------------------------------------------------------------------
 
-        var javaScriptBtn = function (){
+        var javaScriptBtn = function () {
             var mainheader = document.getElementById('main-header');
             mainheader.innerText = "Javascript is Cool";
         }
@@ -65,12 +67,12 @@
 
         // ------------------------------------------------------------------------------------------------
 
-        var letsBlue = function(){
-            var subHeader= document.getElementById('sub-header');
+        var letsBlue = function () {
+            var subHeader = document.getElementById('sub-header');
             subHeader.style.color = 'blue';
         }
 
-        document.getElementById('btn2').addEventListener('click',letsBlue)
+        document.getElementById('btn2').addEventListener('click', letsBlue)
 
         //------------------------------------------------------------------------------------------------
 
@@ -91,12 +93,12 @@
 
         //------------------------------------------------------------------------------------------------
 
-        var turnEmGrey = function(){
+        var turnEmGrey = function () {
             var listItems = document.getElementsByTagName('li');
-            for(let i = 0; i < listItems.length;i++){
-                if(listItems[i].getAttribute('data-dbid')=== '1'){
+            for (let i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute('data-dbid') === '1') {
                     listItems[i].style.color = "blue";
-                }else if( i % 2 === 0){
+                } else if (i % 2 === 0) {
                     listItems[i].style.color = 'grey';
                 }
             }
@@ -115,7 +117,7 @@
 
         // subParagraphs[0].innerText = "Mission Accomplished!";
 
-        var translateProfressor = function(){
+        var translateProfressor = function () {
             var subParagraphs = document.getElementsByClassName('sub-paragraph');
             subParagraphs[0].innerText = "Mission Accomplished"
         }
