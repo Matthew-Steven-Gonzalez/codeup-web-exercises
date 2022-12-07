@@ -111,8 +111,8 @@ console.log(developers);
 
 let list = '<ul>';
 
-for(let developer of developers){list += `<li> ${developer} </li>`;}
+for(let developer of developers){list += `<li>${developer}</li>`;}
 
-list += '</ul>';
+list += '</ul>'
 
 console.log(list);
