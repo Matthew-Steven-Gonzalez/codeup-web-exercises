@@ -28,21 +28,26 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
     // TODO: Take the data from inventory.json and append it to the products table
-    $.get("data/inventory.json").done(function(info){
-        console.log(info);
-        info.forEach(function(tool){
-            $('#insertProducts').append('<tr>' +
-                '<td> ' + tool.title + '</td>' +
-                '<td> ' + tool.quantity + '</td>' +
-                '<td> ' + tool.price + '</td>' +
-                '<td> ' + tool.catagories + '</td>' +
-                '</tr>');
-        })
+    function buildATable() {
+        $.get("data/inventory.json").done(function (info) {
+            console.log(info);
+            let builtTable= "";
+            info.forEach(function (tool) {
+                builtTable += "<tr>";
+                builtTable += "<td>" + tool.title + "</td>";
+                builtTable += "<td>" + tool.quantity+ "</td>";
+                builtTable += "<td>" + tool.price.toFixed(2)+ "</td>";
+                builtTable += "<td>" + tool.categories.join(', ') + "</td>";
+                builtTable += "</tr>"
+            })
+            $("#insertProducts").html(builtTable);
+        });
+    }
+    $("#refreshBTN").click(function(){buildATable();
+    })
 
-    })
-    $("#refreshBTN").click(function(){
-        info.reload();
-    })
+    buildATable();
+
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
