@@ -1,5 +1,5 @@
 "use strict";
-
+(()=> {
 const users = [
     {
         id: 1,
@@ -42,9 +42,18 @@ let threeLanguages = users.filter((user) => user.languages.length >= 3);
 
 let theirEmails = users.map((user) => user.email );
 
-const YOE = users.reduce((accumulator, currentValue) => accumulator + currentValue.yearsOfExperience, 0) / users.length;
+const YOE = users.reduce((total, user) => total + user.yearsOfExperience, 0) / users.length;
 
-const longestEmail = users.reduce((longest, user) => user.email.length > longest.email.length ? user : longest);
+// const longestEmail = users.reduce((longest, user) => user.email.length > longest.email.length ? user : longest);
+
+    const longestEmail = users.reduce((longest, user) =>{
+        if( user.email.length > longest.length){
+            return user.email;
+        }
+        return longest
+    },"");
+
+
 
 const usersNames = users.reduce((names, user,index) => {
     if( index < users.length -1){
@@ -76,3 +85,5 @@ console.log(longestEmail);
 console.log( usersNames);
 
 console.log(listOfLanguages);
+
+})();
