@@ -1,9 +1,9 @@
 "use strict";
 
-$('h1').click(function(e) {
+$('h1').click(function() {
     $(this).css("background-color","lavender");
 });
-$('p').click(function(e) {
+$('p').dblclick(function() {
     $(this).css("font-size","18px");
 });
 $('li').hover(function() {

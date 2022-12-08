@@ -25,11 +25,11 @@
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
-<select class="form-select" aria-label="blah" id="zoomOption">
-    <option selected>Choose a zoom</option>
-    <option value="1" >Original</option>
-    <option value="2">Far</option>
-    <option value="3">There</option>
+<select class="form-select " aria-label="zoo" id="zoom">
+    <option selected disabled>Choose a zoom</option>
+    <option value="original" >Original</option>
+    <option value="far">Far</option>
+    <option value="there">There</option>
 </select>
 
 <div class="row">
@@ -66,8 +66,8 @@
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 15,
-        center: [-87.96028, 42.30528]
+        zoom: 11,
+        center: [-87.954352, 42.28635]
     });
 
     var eateries = [
@@ -106,32 +106,32 @@
         });
     })
 
-    $('#zoomOption').mousedown(function(){
-        console.log('test');
-    });
 
-
-    // $('#zoomOption').click(function(){
-    //     if(${} === 1){
-    //         map.mapZoom(15);
-    //     }
-    //     else if(value ===2){
-    //         map.mapZoom(18);
-    //     }
-    //     else if (value ===3){
-    //         map.mapZoom(5);
-    //     }
-    // })
-
+    $('#zoom').change(function(){
+        if(this.value === "original"){
+            map.setZoom(11);
+        }
+        else if(this.value === "far"){
+            map.setZoom(5);
+        }
+        else if(this.value === "there"){
+            map.setZoom(18);
+        }
+    })
 
     $('#WBC').click(function(){
         map.setCenter([-87.96028, 42.30528]);
+        map.setZoom(15);
     })
     $('#PHD').click(function(){
         map.setCenter([-87.95911, 42.23991]);
+        map.setZoom(15);
+
     })
     $('#MFs').click(function(){
         map.setCenter([-87.954352, 42.28635]);
+        map.setZoom(15);
+
     })
 
 </script>
