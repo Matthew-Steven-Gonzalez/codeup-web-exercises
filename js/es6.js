@@ -115,4 +115,7 @@ for(let developer of developers){list += `<li>${developer}</li>`;}
 
 list += '</ul>'
 
-console.log(list);
+if (true) {
+  let x = 5;
+}
+console.log(typeof x);
